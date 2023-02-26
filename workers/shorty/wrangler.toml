@@ -1,0 +1,7 @@
+name = "shorty"
+main = "src/index.ts"
+compatibility_date = "2022-07-15"
+
+kv_namespaces = [
+  { binding = "SHORT_URLS", id = "8898889646a642bd8be05a4142b3d364", preview_id = "40cb60e1161a4fd0b93c66674c4a3eb0" },
+]
