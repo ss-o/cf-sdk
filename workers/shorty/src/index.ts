@@ -11,15 +11,14 @@ export default {
     _ctx: ExecutionContext
   ): Promise<Response> {
     const url = new URL(request.url);
-
+    const statusCode = 301;
     const { pathname } = url;
-
     const redirectURL = await env.SHORT_URLS.get(pathname);
 
     if (!redirectURL) {
       return new Response(`No URL found for: '${pathname}'`);
     }
 
-    return Response.redirect(redirectURL, 301);
+    return Response.redirect(redirectURL, statusCode);
   },
 };
