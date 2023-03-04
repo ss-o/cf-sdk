@@ -8,7 +8,7 @@ export default {
   async fetch(
     request: Request,
     env: Env,
-    _ctx: ExecutionContext
+    ctx: ExecutionContext
   ): Promise<Response> {
     const url = new URL(request.url);
     const statusCode = 301;
